@@ -1,0 +1,15 @@
+body {
+    background-color:#5272a1; 
+    color:white;
+    font-family:verdana;
+    }
+    table, th, td {
+    border:1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 2px;
+    }
+    a {text-decoration: none;
+      color:#ffffff;
+    }
