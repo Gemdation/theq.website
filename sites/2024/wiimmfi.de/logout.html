@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Wiimmfi and Nintendo WFC error codes</title>
+<title>Logout</title>
 <link rel='stylesheet' type='text/css' href='css/dclib/base.css?v=8vQgLA'>
 <link rel='stylesheet' type='text/css' href='css/dclib/dclib.css?v=8vQgLA'>
 <link rel='stylesheet' type='text/css' href='css/wiimmfi.css?v=8vQgLA'>
 <link rel='stylesheet' type='text/css' href='css/mii-font.css?v=8vQgLA'>
-<link rel="icon" type="image/x-icon" href="images/favicon.png">
 <script src="js/dclib/dclib.js?v=8vQgLA"></script>
 <script src="js/wiimmfi.js?v=8vQgLA"></script>
 </head>
@@ -43,7 +43,7 @@
 <div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
     <div class="nb-menu-sep"> </div>
     <a class="nb-menu-link" href="user/settings">Private settings</a>
-    <a class="nb-menu-link" href="mkw-settings">Private MKW settings</a>
+    <a class="nb-menu-link" href="payload/settings">Private MKW settings</a>
     <a class="nb-menu-link active" href="user/status" title="Rights, consoles, profiles, ...">Private status</a>
     <a class="nb-menu-link" href="user/messages">Private messages</a>
     <div class="nb-menu-sep"> </div>
@@ -69,6 +69,17 @@
 </div>
 <div class=logo><a href=../wiimmfi.de><img src="images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=donate>Donate</a></div>
 
-<!--this is a template for the top bar and the wiimmfi donation hover thing-->
+
+<div class="text">
+<h1>Logout</h1>User »Account« logged out! Just kidding! :P
+<p>
+<ul class="narrow">
+<li><a href="login">Wiimmfi Login</a></list>
+<li><a href="../wiimmfi.de">Wiimmfi Main Page</a></list>
+</ul>
+</div><script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
 </body>
 </html>

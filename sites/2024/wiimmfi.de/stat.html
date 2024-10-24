@@ -2,35 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <title>General Wiimmfi Statistics</title>
 <link rel='stylesheet' type='text/css' href='css/dclib/base.css?v=8vQgLA'>
 <link rel='stylesheet' type='text/css' href='css/dclib/dclib.css?v=8vQgLA'>
 <link rel='stylesheet' type='text/css' href='css/wiimmfi.css?v=8vQgLA'>
 <link rel='stylesheet' type='text/css' href='css/mii-font.css?v=8vQgLA'>
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
 <script src="js/dclib/dclib.js?v=8vQgLA"></script>
 <script src="js/wiimmfi.js?v=8vQgLA"></script>
-<script>
-dcLib_DEVELOP = 0;
-dcLib_AjaxUsePostDef = 1
-
-</script>
-<meta name="keywords" content="Wiimmfi,Wiimmfi games">
 </head>
-<body class="js-disabled" >
-<script>
-if (document.body)
-{
-    document.body.classList.remove('js-disabled');
-    document.body.classList.add('js-enabled');
-}
-</script><noscript><div class=js-warning>Please activate JavaScript.
-JavaScript is used for many interactive elements of this website.</div></noscript>
+<body>
+
 <div style="margin-bottom:28px"></div>
 <div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
-<div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<span class="nb-menu-user">»<a href="user/status">Account</a>« <span class="nb-menu-info">⇒</span></span><div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
 <div class="nb-menu-sep"> </div>
-<a class="nb-menu-link" href="index" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../wiimmfi.de" title="Wiimmfi main page — includes announcements.">Main page</a>
 <a class="nb-menu-link" href="changelog">Change log</a>
 <a class="nb-menu-link" href="game-history">Game history</a>
 <a class="nb-menu-link" href="development">Development</a>
@@ -38,14 +25,15 @@ JavaScript is used for many interactive elements of this website.</div></noscrip
 <div class="nb-menu-sep"> </div>
 <a class="nb-menu-link" href="fc-converter">Friend-Code converter</a>
 <a class="nb-menu-link" href="patcher">Wiimmfi patcher</a>
-<a class="nb-menu-link" href="error">Error codes</a>
+<a class="nb-menu-link active" href="error">Error codes</a>
 <div class="nb-menu-sep"> </div>
 <a class="nb-menu-link" href="login">Login</a>
+<a class="nb-menu-link" href="logout">Logout</a>
 <span class="nb-menu-sep"> </span>
 </div></div>
 <div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
 <div class="nb-menu-sep"> </div>
-<a class="nb-menu-link active" href="stat">Server status</a>
+<a class="nb-menu-link" href="stat">Server status</a>
 <a class="nb-menu-link" href="stats/login">Login statistics</a>
 <a class="nb-menu-link" href="stats/game">Game statistics</a>
 <a class="nb-menu-link" href="show-bans">List of bans</a>
@@ -53,6 +41,17 @@ JavaScript is used for many interactive elements of this website.</div></noscrip
 <a class="nb-menu-link" href="stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
 <span class="nb-menu-sep"> </span>
 </div></div>
+<div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/settings">Private settings</a>
+    <a class="nb-menu-link" href="mkw-settings">Private MKW settings</a>
+    <a class="nb-menu-link active" href="user/status" title="Rights, consoles, profiles, ...">Private status</a>
+    <a class="nb-menu-link" href="user/messages">Private messages</a>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/assign-console">Assign a console</a>
+    <a class="nb-menu-link" href="openhost">Manage OPENHOST</a>
+    <span class="nb-menu-sep"> </span>
+    </div></div>
 <div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
 <div class="nb-menu-sep"> </div>
 <a class="nb-menu-link" href="region/stat" title="MKWii region usage statistics">Region usage</a>
@@ -61,7 +60,7 @@ JavaScript is used for many interactive elements of this website.</div></noscrip
 </div></div>
 <div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
 <div class="nb-menu-sep"> </div>
-<a class="nb-menu-link" href="https://competitions.wiimmfi.de/">Overview</a>
+<a class="nb-menu-link" href="competitions">Overview</a>
 <a class="nb-menu-link" href="comp-stat">Statistics</a>
 <span class="nb-menu-sep"> </span>
 </div></div>
@@ -69,6 +68,8 @@ JavaScript is used for many interactive elements of this website.</div></noscrip
 <a class="nb-menu-link" href="donate">Donate</a>
 </span>
 </div>
+<div class=logo><a href=../wiimmfi.de><img src="images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=donate>Donate</a></div>
+
 <table class="options">
 <tr>
  <td rowspan=6>
@@ -79,54 +80,53 @@ JavaScript is used for many interactive elements of this website.</div></noscrip
  <td><b>Show DISABLED games</b></td>
 </tr><tr>
  <td>
-  <input type="checkbox" id="show-base" name="base" value="1" checked>
+  <input type="checkbox" id="show-base" name="base" value="1" disabled>
   <label for="show-base" class="opt-checked">Show base statistics.</label>
  </td><td>
-  <input type="radio" id="test-hide" name="test" value="hide">
+  <input type="radio" id="test-hide" name="test" value="hide" disabled>
   <label for="test-hide">Hide test games.</label>
  </td><td>
-  <input type="radio" id="disab-hide" name="disab" value="hide">
+  <input type="radio" id="disab-hide" name="disab" value="hide" disabled>
   <label for="disab-hide">Hide disabled games.</label>
  </td>
 </tr>
 <tr>
  <td>
-  <input type="checkbox" id="show-all" name="all" value="1" checked>
+  <input type="checkbox" id="show-all" name="all" value="1" disabled>
   <label for="show-all" class="opt-checked">Show all games.</label>
  </td><td>
-  <input type="radio" id="test-show" name="test" value="show">
+  <input type="radio" id="test-show" name="test" value="show" disabled>
   <label for="test-show">Show as part of the game table.</label>
  </td><td>
-  <input type="radio" id="disab-show" name="disab" value="show">
+  <input type="radio" id="disab-show" name="disab" value="show" disabled>
   <label for="disab-show">Show as part of game/test table.</label>
  </td>
 </tr>
 <tr>
  <td>
-  <input type="checkbox" id="show-stat" name="stat" value="1" checked>
+  <input type="checkbox" id="show-stat" name="stat" value="1" disabled>
   <label for="show-stat" class="opt-checked">Order games by status.</label>
  </td><td>
-  <input type="radio" id="test-sep" name="test" value="sep">
+  <input type="radio" id="test-sep" name="test" value="sep" disabled>
   <label for="test-sep">Show separated.</label>
  </td><td>
-  <input type="radio" id="disab-sep" name="disab" value="sep" checked>
+  <input type="radio" id="disab-sep" name="disab" value="sep" disabled>
   <label for="disab-sep" class="opt-checked">Show separated.</label>
  </td>
 </tr>
 <tr>
  <td>
-  <input type="checkbox" id="show-mkw" name="mkw" value="1" checked>
+  <input type="checkbox" id="show-mkw" name="mkw" value="1" disabled>
   <label for="show-mkw" class="opt-checked">Show MKWii region table.</label>
  </td><td>
-  <input type="radio" id="test-all" name="test" value="all" checked>
+  <input type="radio" id="test-all" name="test" value="all" disabled>
   <label for="test-all" class="opt-checked">Show all test games separated.</label>
  </td><td>
  </td>
 </tr>
 <tr><td colspan=2>
- <input type="submit" name="update" value=" Update Statistics ">
- &nbsp;
- <input type="submit" name="showall" value=" Show All Games ">
+ <button>Update Statistics</button>
+ <button>Show All Games</button>
 </td></tr>
 </table>
 </form><table id="sum" class="table11">
