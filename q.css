@@ -3,3 +3,4 @@ table, th, td {border:1px solid white;border-collapse: collapse;}
 th, td {padding: 2px;}
 a {text-decoration: none;color:#ffffff;}
 mark {color:#5272a1;background-color: white;font-weight: bold;}
+div.images {text-align: center;}
