@@ -1,6 +1,9 @@
-body {background-color:#5272a1; color:white;font-family:verdana,sans-serif;}
+@font-face {font-family: 'Verdana'; src: url('media/verdana.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+@font-face {font-family: 'Verdana'; src: url('media/verdana-bold.ttf') format('truetype'); font-weight: bold; font-style: normal;}
+body {background-color:#5272A1; color:white;font-family:'Verdana',sans-serif;}
 table, th, td {border:1px solid white;border-collapse: collapse;}
 th, td {padding: 2px;}
-a {text-decoration: none;color:#ffffff;}
-mark {color:#5272a1;background-color: white;font-weight: bold;}
+img {border:1px solid white}
+a {text-decoration: none;color:white;}
+mark {color:#5272A1;background-color: white;font-weight: bold;}
 div.images {text-align: center;}
