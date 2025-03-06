@@ -4,6 +4,6 @@ body {background-color:#5272A1; color:white;font-family:'Verdana',sans-serif;}
 table, th, td {border:1px solid white;border-collapse: collapse;}
 th, td {padding: 2px;}
 img {border:1px solid white}
-a {text-decoration: none;color:white;}
+a {text-decoration: underline;color:white;}
 mark {color:#5272A1;background-color: white;font-weight: bold;}
 div.images {text-align: center;}
