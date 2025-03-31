@@ -1,8 +1,13 @@
 @font-face {font-family: 'Verdana'; src: url('verdana.ttf') format('truetype'); font-weight: normal; font-style: normal;}
 @font-face {font-family: 'Verdana'; src: url('verdana-bold.ttf') format('truetype'); font-weight: bold; font-style: normal;}
-body {background-color:#5272A1; color:white;font-family:'Verdana',sans-serif;}
-table, th, td {border:1px solid white;border-collapse: collapse;}
-th, td {padding: 2px;}
+body {background-color:#5272A1; color:white;font-family:'Verdana',sans-serif;text-align: center;}
+body.dir {text-align: left;}
+body.dir table {text-align: left;margin: 0}
+
+table, th, td {border:1px solid white;border-collapse: collapse;text-align: center;margin: auto;}
+th, td {padding: 2px;text-align: left;}
+table.hist {text-align: left;width: 450px}
+table.hist td {border: none;}
 img {border:1px solid white}
 a {text-decoration:underline;color:white;}
 a:hover {color:#95BCF7}
