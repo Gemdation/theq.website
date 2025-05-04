@@ -8,9 +8,10 @@ table, th, td {border:1px solid white;border-collapse: collapse;text-align: cent
 th, td {padding: 2px;text-align: left;}
 table.hist {text-align: left;width: 450px}
 table.hist td {border: none;}
+table.dir td {padding: 5px;font-size: larger;font-weight: bold}
 img {border:1px solid white}
-a {text-decoration:underline;color:white;}
+a {text-decoration:none;color:white;cursor: pointer;}
 a:hover {color:#95BCF7}
 a:active {color:#354A69}
 mark {color:#5272A1;background-color: white;font-weight: bold;}
-div.images {text-align: center;}
+div.images {text-align: center}
