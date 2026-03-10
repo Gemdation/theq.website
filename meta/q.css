@@ -1,6 +1,6 @@
 @font-face {font-family: 'Verdana'; src: url('verdana.ttf') format('truetype'); font-weight: normal; font-style: normal;}
 @font-face {font-family: 'Verdana'; src: url('verdana-bold.ttf') format('truetype'); font-weight: bold; font-style: normal;}
-body {margin:0;background-color:#5272A1;color:white;font-family:'Verdana',sans-serif;text-align:left;padding:5px;}
+body {margin:0;background-color:#5272A1;color:white;font-family:'Verdana',sans-serif;text-align:left;}
 body.dir {text-align: left;}
 body.dir table {text-align: left;margin: 0}
 
